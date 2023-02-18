@@ -118,17 +118,8 @@ body._lock {
 			}
 		}
 	}
-
-	&__menu {
-	}
 }
 .menu {
-
-	&__icon {
-	}
-
-	&__body {
-	}
 
 	&__list {
 		@media (min-width: $mobile) {
@@ -143,7 +134,6 @@ body._lock {
 			display: block;
 		}
 		}
-		
 	}
 }
 .menu-link {
@@ -189,5 +179,4 @@ body._lock {
 			}
 		}
 	}
-
 }
