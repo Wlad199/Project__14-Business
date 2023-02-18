@@ -280,6 +280,13 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 0px 0px 58px 0px;
+		@media (max-width: $tablet) {
+			padding: 0px 0px 40px 0px;
+		}
+		@media (max-width: 630px) {
+			display: block;
+			padding: 0px 0px 40px 0px;
+		}
 	}
 
 	&__title {
@@ -289,6 +296,7 @@
 .news-news {
 	display: flex;
 	margin: 0px -15px;
+	flex-wrap: wrap;
 }
 .title {
 }
@@ -309,6 +317,14 @@
 		&:not(:last-child){
 			margin: 0px 66px 0px 0px;
 		}
+		@media (max-width: $tablet) {
+			&:not(:last-child){
+				margin: 0px 30px 0px 0px;
+			}
+		}
+		@media (max-width: 630px) {
+			padding: 30px 0px 0px 0px;
+		}
 	}
 
 	&__content {
@@ -327,9 +343,14 @@
 	flex: 0 1 33.333%;
 	position: relative;
 	padding: 0px 15px;
-	flex-wrap: wrap;
-	@media (max-width: 900px) {
+	margin: 0px 0px 60px 0px;
+	@media (max-width: $tablet) {
 		flex: 0 1 50%;
+		margin: 0px 0px 40px 0px;
+	}
+	@media (max-width: 630px) {
+		flex: 0 1 100%;
+		//margin: 0px 40px;
 	}
 
 	&__image {
@@ -339,18 +360,27 @@
 		&::before {
 			content: "";
 			position: absolute;
-			right: 10px;
-			top: -90px;
-			width: 600px;
-			height: 120%;
+			right: -60px;
+			top: 0;
+			width: 200%;
+			height: 100%;
+			//right: 10px;
+			//top: -90px;
+			//width: 600px;
+			//height: 120%;
 			background: linear-gradient(198.43deg, #007397 4.17%, rgba(0, 115, 151, 0.0001) 87.5%);
 			transform: rotate(-245deg);
 		}
 		img {
-			max-width: 100%;
+			width: 100%;
+			@media (max-width: 630px) {
+				//max-height: 10%;
+			}
 		}
 	}
-
+	&__media {
+		position: relative;
+	}
 
 	&__label {
 		font-weight: 700;
@@ -371,13 +401,17 @@
 		text-transform: uppercase;
 		color: #fff;
 		position: absolute;
-		top: 230px;
-		left: 30px;
-		max-width: 310px;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 0px 30px 70px 30px;
 		@media (max-width: $pc) {
-			font-size: 18px;
-			top: 200px;
-			max-width: 260px;
+			padding: 0px 30px 50px 30px;
+			font-size: 20px;
+		}
+		@media (max-width: $mobile) {
+			padding: 0px 30px 70px 30px;
+			font-size: 24px;
 		}
 	}
 
@@ -385,7 +419,10 @@
 		font-size: 16px;
 		line-height: 150%; /* 32/16 */
 		color: #646667;
-		padding: 0px 0px 32px 0px;
+		padding: 0px 0px 25px 0px;
+		@media (max-width: 630px) {
+			padding: 0px 0px 15px 0px;
+		}
 	}
 
 	&__button {
